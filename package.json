@@ -14,10 +14,14 @@
   "license": "ISC",
   "dependencies":{
      "dotenv":"^4.0.0", 
-     "twit":"^2.2.5"
+     "twit":"^2.2.5",
+    "request": "^2.87.0"
    }, 
   "bugs": {
     "url": "https://github.com/boulder/space-bot/issues"
   },
-  "homepage": "https://github.com/boulder/space-bot#readme"
+  "homepage": "https://github.com/boulder/space-bot#readme",
+  "devDependencies": {
+    "request": "latest"
+  }
 }

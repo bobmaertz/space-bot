@@ -1,30 +1,11 @@
-const Twit = require('twit');
-const config = require('./config');
+var nasa = require('./lib/services/nasa.mars.service.js');
+var twitter = require('./lib/services/twitter.service.js');
+const config = require('./conf/config');
 
-const bot = new Twit(config);
+let nasaService = new nasa('DEMO_KEY');
+let twitterService = new twitter(config);
 
-var retweet = function() {
-    var params = {
-        q: '#space, #nasa',  // REQUIRED
-        result_type: 'recent',
-        lang: 'en'
-    }
-    bot.get('search/tweets', params, function (err, data) {
-        // if there no errors
-        if (!err) {
-            // grab ID of tweet to retweet
-            var retweetId = data.statuses[0].id_str;
-            console.log('Something went RIGHT while SEARCHING...');
-            console.log( data.statuses[0].text);
+nasaService.getMarsRovers();
+//nasaService.getRoverCameras("spirit");
 
-        }
-        // if unable to Search a tweet
-        else {
-            console.log('Something went wrong while SEARCHING...');
-        }
-    });
-};
-
-retweet();
-
-setInterval(retweet, 3000000);
+twitterService.searchTweets('#nasa');

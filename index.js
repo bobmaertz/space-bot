@@ -1,2 +1,2 @@
-require('./src/bot')
+require('./src/bot');
 
