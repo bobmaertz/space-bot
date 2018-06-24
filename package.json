@@ -1,0 +1,23 @@
+{
+  "name": "space-bot",
+  "version": "1.0.0",
+  "description": "SpaceBot tweets fun facts about outer-space!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boulder/space-bot.git"
+  },
+  "author": "bou1der",
+  "license": "ISC",
+  "dependencies":{
+     "dotenv":"^4.0.0", 
+     "twit":"^2.2.5"
+   }, 
+  "bugs": {
+    "url": "https://github.com/boulder/space-bot/issues"
+  },
+  "homepage": "https://github.com/boulder/space-bot#readme"
+}
